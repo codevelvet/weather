@@ -14,7 +14,7 @@ class WeatherService
   # ws = WeatherService.new
   # ws.today(zip: 94607)
   #
-  # Raises WeatherService::ClientError and Faraday errors
+  # Raises OpenWeather::Errors::Fault and Faraday errors
   #
   def today(zip:)
     @client.current_weather(zip: zip, units: "imperial")
