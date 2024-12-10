@@ -7,7 +7,7 @@ gem "sprockets-rails"
 # Use sqlite as the database for Active Record
 gem "sqlite3", ">= 1.4"
 # Use postgresql as the database for Active Record
-#gem "pg", "~> 1.1"
+# gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -52,7 +52,13 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
+  # For testing
+  gem "rails-controller-testing"
   gem "rspec-rails", "~> 7.0.0"
+
+  # For testing API responses
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do

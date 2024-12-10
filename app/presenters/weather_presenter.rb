@@ -1,17 +1,19 @@
 class WeatherPresenter
+  # Wraps the OpenWeather API response data for presentation
+  #
   def initialize(data)
     @data = data
   end
 
   def current_temp
-    @data&.temp
+    @data&.main&.temp
   end
 
   def max_temp
-    @data&.temp_max
+    @data&.main&.temp_max
   end
 
   def min_temp
-    @data&.temp_min
+    @data&.main&.temp_min
   end
 end

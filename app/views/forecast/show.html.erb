@@ -1,10 +1,12 @@
 <%= form_with url: "/forecast", method: :get, local: true do |form| %>
   <%= form.label :zip, "Forecast for (Zip code):" %>
-  <%= form.search_field :zip %>
+  <%= form.search_field :zip, "data-testid" => "forecast-search-input" %>
   <%= form.submit "Search" %>
 <% end %>
 <hr/>
 <% if @weather.present? %>
-  <h1>Current: </h1>
-  <h4><%= @weather.current_temp %></h4>
+    Current:
+    <div data-testid="current-temp">
+      <%= @weather.current_temp %>
+    </div>
 <% end %>
