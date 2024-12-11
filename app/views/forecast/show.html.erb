@@ -10,4 +10,7 @@
     <div data-testid="current-temp">
       <%= @weather.current_temp %>
     </div>
+    <% if @from_cache.present? %>
+      <div data-testid="cache-indicator">c</div>
+    <% end %>
 <% end %>
