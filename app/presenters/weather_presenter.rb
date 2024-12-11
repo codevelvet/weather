@@ -1,6 +1,6 @@
 class WeatherPresenter
+  # Using a simple presenter design pattern
   # Wraps the OpenWeather API response data for presentation
-  #
   def initialize(data)
     @data = data
   end

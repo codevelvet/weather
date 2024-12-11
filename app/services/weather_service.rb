@@ -3,6 +3,10 @@ class WeatherService
   #
   # Delegates to an OpenWeather::Client
   #
+  # The service layer design pattern encapsulates core business logic
+  # If this app included a database, the service layer would provide the
+  # heavy lifting while the model layer would simply store the data.
+  #
   def initialize
     @client = OpenWeather::Client.new(api_key: ENV["WEATHER_API_KEY"])
   end
