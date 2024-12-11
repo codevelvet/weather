@@ -5,6 +5,9 @@ class ForecastController < ApplicationController
       data = weather_service.today(zip: params[:zip].to_i)
       @weather = WeatherPresenter.new(data)
     end
+  rescue OpenWeather::Errors::Fault, Faraday::Error => exception
+    flash[:alert] = exception.message || "Unknown error"
+    redirect_to "/forecast"
   end
 
   private

@@ -1,3 +1,4 @@
+<%= render "shared/errors" %>
 <%= form_with url: "/forecast", method: :get, local: true do |form| %>
   <%= form.label :zip, "Forecast for (Zip code):" %>
   <%= form.search_field :zip, "data-testid" => "forecast-search-input" %>
