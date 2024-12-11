@@ -1,4 +1,7 @@
 class ForecastController < ApplicationController
+  # GET the weather page
+  # If a zip parameter exists, fetch the weather
+  #
   def show
     @weather = nil
     if params[:zip]
