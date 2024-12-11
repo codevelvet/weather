@@ -1,4 +1,4 @@
-# Weather App: A simple Rails app to fetch today's forecast.
+# Weather App: Fetch today's weather
 Given a zip code, this version fetches today's weather forecast including:
  * current temp
  * high temp
@@ -55,7 +55,7 @@ Bootstrap is being used for layout and styling.
 Responsive Design is baked in.
 
 ## Scaling considerations
-Since uses a 3rd party API, including a rate limiter to avoid unexpected lockout for everyone is prudent.  Some options include using the rack_attack gem or if on Rails 7.2+ use the baked in rate limiter.
+Since this app uses a 3rd party API, it is prudent to use a rate limiter to avoid unexpected lockout for everyone.  Some options include using the [rack_attack gem](https://github.com/rack/rack-attack) or if on Rails 7.2+ (as this app is on) use the baked in rate limiter.
 
 ### Load balancer
 Setup and monitor a load balancer to distribute traffic across multiple servers.
