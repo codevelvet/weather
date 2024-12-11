@@ -6,11 +6,21 @@
 <% end %>
 <hr/>
 <% if @weather.present? %>
+  <div data-testid="forecast-data">
     Current:
     <div data-testid="current-temp">
       <%= @weather.current_temp %>
     </div>
+    Low:
+    <div data-testid="min-temp">
+      <%= @weather.min_temp %>
+    </div>
+    High:
+    <div data-testid="max-temp">
+      <%= @weather.max_temp %>
+    </div>
     <% if @from_cache.present? %>
       <div data-testid="cache-indicator">c</div>
     <% end %>
+  </div>
 <% end %>
